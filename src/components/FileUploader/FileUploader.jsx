@@ -70,6 +70,7 @@ const FileUploader = () => {
     const tokenClient = window.google.accounts.oauth2.initTokenClient({
       client_id: CLIENT_ID,
       scope: "https://www.googleapis.com/auth/drive.file",
+      redirect_uri: "https://wspomnienia-slubu.netlify.app",
       callback: (response) => {
         if(response.error){
           console.error("Błąd przy logowaniu:", response.error)
